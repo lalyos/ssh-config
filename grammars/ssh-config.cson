@@ -1,0 +1,73 @@
+'fileTypes': [
+  'ssh_config'
+  '.ssh/config'
+  'sshd_config'
+]
+'name': 'SSH Config'
+'patterns': [
+  {
+    'match': '\\b(AddressFamily|B(atchMode|indAddress)|C(hallengeResponseAuthentication|heckHostIP|iphers?|learAllForwardings|ompression(Level)?|onnect(Timeout|ionAttempts)|ontrolMaster|ontrolPath)|DynamicForward|E(nableSSHKeysign|scapeChar)|Forward(Agent|X11(Trusted)?)|G(SSAPI(Authentication|DelegateCredentials|CleanupCredentials)|atewayPorts|lobalKnownHostsFile)|Host(KeyAlgorithms|KeyAlias|Name|basedAuthentication)|Identit(iesOnly|yFile)|L(ocalForward|ogLevel)|MACs|N(oHostAuthenticationForLocalhost|umberOfPasswordPrompts)|P(asswordAuthentication|ort|referredAuthentications|rotocol|roxyCommand|ubkeyAuthentication)|R(SAAuthentication|emoteForward|hostsRSAAuthentication)|S(erverAliveCountMax|erverAliveInterval|martcardDevice|trictHostKeyChecking)|TCPKeepAlive|U(sePrivilegedPort|ser(KnownHostsFile)?)|VerifyHostKeyDNS|XAuthLocation)|AcceptEnv|UsePAM|X11Forwarding|Subsystem|SyslogFacility|LogLevel|(Kerberos(Authentication|OrLocalPasswd|TicketCleanup|GetAFSToken))\\b'
+    'name': 'keyword.other.ssh-config'
+  }
+  {
+    'begin': '(^[ \\t]+)?(?=#)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.ssh-config'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': '#'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.ssh-config'
+        'end': '\\n'
+        'name': 'comment.line.number-sign.ssh-config'
+      }
+    ]
+  }
+  {
+    'begin': '(^[ \\t]+)?(?=//)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.ssh-config'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': '//'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.ssh-config'
+        'end': '\\n'
+        'name': 'comment.line.double-slash.ssh-config'
+      }
+    ]
+  }
+  {
+    'captures':
+      '1':
+        'name': 'storage.type.ssh-config'
+      '2':
+        'name': 'entity.name.section.ssh-config'
+      '3':
+        'name': 'meta.toc-list.ssh-config'
+    'match': '(?:^| |\\t)(Host)\\s+((.*))$'
+  }
+  {
+    'match': '\\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b'
+    'name': 'constant.numeric.ssh-config'
+  }
+  {
+    'match': '\\b[0-9]+\\b'
+    'name': 'constant.numeric.ssh-config'
+  }
+  {
+    'match': '\\b(yes|no)\\b'
+    'name': 'constant.language.ssh-config'
+  }
+  {
+    'match': '\\b[A-Z_]+\\b'
+    'name': 'constant.language.ssh-config'
+  }
+]
+'scopeName': 'source.ssh-config'
