@@ -2,7 +2,7 @@
   "name": "ssh-config",
   "version": "0.9.0",
   "description": "ssh config syntax",
-  "repository": "https://github.com/atom/ssh-config",
+  "repository": "https://github.com/lalyos/ssh-config",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
