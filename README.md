@@ -1,3 +1,3 @@
 # ssh-config package
 
-A short description of your package.
+ssh-config syntax highlighting for [atom editor](https://atom.io)
