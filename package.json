@@ -9,6 +9,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "eslint": "3.9.1"
+    "coffeelint": "1.16.0"
   }
 }
