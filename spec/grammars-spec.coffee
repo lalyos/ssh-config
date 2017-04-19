@@ -20,3 +20,11 @@ describe "ssh grammars", ->
       expect(tokens[1]).toEqual value: 'ssh-rsa', scopes: encryptionScopes
       expect(tokens[2]).toEqual value: 'AAAsecretAAA=', scopes: keyScopes
       expect(tokens[3]).toBe undefined
+
+    it 'highlights a hostname line', ->
+      {tokens} = grammar.tokenizeLine("shell.sf.net ssh-rsa AAAsecretAAA=")
+
+      expect(tokens[0]).toEqual value: 'shell.sf.net', scopes: hostScopes
+      expect(tokens[1]).toEqual value: 'ssh-rsa', scopes: encryptionScopes
+      expect(tokens[2]).toEqual value: 'AAAsecretAAA=', scopes: keyScopes
+      expect(tokens[3]).toBe undefined
