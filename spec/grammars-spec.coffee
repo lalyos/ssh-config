@@ -28,3 +28,11 @@ describe "ssh grammars", ->
       expect(tokens[1]).toEqual value: 'ssh-rsa', scopes: encryptionScopes
       expect(tokens[2]).toEqual value: 'AAAsecretAAA=', scopes: keyScopes
       expect(tokens[3]).toBe undefined
+
+    it 'highlights a hostname and IP line', ->
+      {tokens} = grammar.tokenizeLine("github.com,192.30.252.131 ssh-rsa AAAsecretAAA=")
+
+      expect(tokens[0]).toEqual value: 'github.com,192.30.252.131', scopes: hostScopes
+      expect(tokens[1]).toEqual value: 'ssh-rsa', scopes: encryptionScopes
+      expect(tokens[2]).toEqual value: 'AAAsecretAAA=', scopes: keyScopes
+      expect(tokens[3]).toBe undefined
