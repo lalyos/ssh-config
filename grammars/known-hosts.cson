@@ -11,7 +11,7 @@
       '1':
         'name': 'constant.other'
       '2':
-        'name': 'constant.language'
+        'name': 'keyword.other'
       '3':
         'name': 'string.unquoted'
       '5':

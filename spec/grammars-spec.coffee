@@ -7,7 +7,7 @@ describe "ssh grammars", ->
 
   describe "known_hosts", ->
     hostScopes = [ 'source.ssh-known-hosts', 'meta.ssh-key-line.ssh-known-hosts', 'constant.other' ]
-    encryptionScopes = [ 'source.ssh-known-hosts', 'meta.ssh-key-line.ssh-known-hosts', 'constant.language' ]
+    encryptionScopes = [ 'source.ssh-known-hosts', 'meta.ssh-key-line.ssh-known-hosts', 'keyword.other' ]
     keyScopes = [ 'source.ssh-known-hosts', 'meta.ssh-key-line.ssh-known-hosts', 'string.unquoted' ]
     commentScopes = [ 'source.ssh-known-hosts', 'meta.ssh-key-line.ssh-known-hosts', 'comment.line' ]
 
