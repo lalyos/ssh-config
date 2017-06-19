@@ -1,0 +1,21 @@
+'scopeName': 'source.ssh-known-hosts'
+'fileTypes': [
+  'known_hosts'
+  '.ssh/known_hosts'
+]
+'name': 'SSH Known Hosts'
+'patterns': [
+  {
+    'name': 'meta.ssh-key-line.ssh-known-hosts'
+    'captures':
+      '1':
+        'name': 'constant.other'
+      '2':
+        'name': 'keyword.other'
+      '3':
+        'name': 'string.unquoted'
+      '5':
+        'name': 'comment.line'
+    'match': '^([^ ]+) ([^ ]+) ([^ ]+)(\\s+(.*))?$'
+  }
+]
