@@ -1,6 +1,6 @@
 {
   "name": "ssh-config",
-  "version": "0.10.1",
+  "version": "0.11.0",
   "description": "ssh config syntax",
   "repository": "https://github.com/lalyos/ssh-config",
   "license": "MIT",
